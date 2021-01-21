@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #f7f7f8;
+}
+
+#add, #task {
+  position: fixed;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+}
+
+#add {
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background: #00c170;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#add svg {
+  height: auto;
+  width: 20px;
+}
+
+#add svg path {
+  fill: #ffffff;
+}
+
+#task {
+  bottom: 25px;
+  left: 25px;
+  padding: 10px 20px;
+  font-size: 19px;
+  border-radius: 100vw;
+  -webkit-box-shadow: 0 0 7px rgba 0, 0, 0, 0.3;
+          box-shadow: 0 0 7px rgba 0, 0, 0, 0.3;
+}
+
+.user-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(230px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 616px;
+  margin: 120px auto;
+}
+
+@media screen and (max-width: 493px) {
+  .user-list {
+    margin: 20px auto;
+  }
+}
+
+.user-list--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 7px 14px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 14px -2px rgba(0, 0, 0, 0.2);
+}
+
+.user-list--item-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.user-list--item-details img {
+  width: 45px;
+  border-radius: 50%;
+  margin: 0 15px 0 0;
+}
+
+.user-list--item-details-name h3 {
+  font-size: 21px;
+}
+
+.user-list--item-details-name span {
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.user-list--item-details-name span.blue-tag {
+  background: #327dcd;
+  color: #ffffff;
+  padding: 5px;
+}
+
+.user-list--item-details-name span.green-tag {
+  background: #00c170;
+  color: black;
+  padding: 5px;
+}
+
+.user-list--item-menu {
+  width: 15px;
+}
+
+.user-list--item-menu svg {
+  height: auto;
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,138 @@
+$grey: #f7f7f8;
+$blue: #327dcd;
+$green: #00c170;
+
+
+html, body {
+  height: 100%;
+  }
+
+
+body {
+  background: $grey;
+}
+
+//buttons
+%my-buttons {
+  position: fixed;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  }
+
+#add {
+  @extend %my-buttons;
+    top: 25px;
+    right: 25px;
+  width: 40px;
+  height: 40px;
+    background: $green;
+    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+    svg {
+      height: auto;
+      width: 20px;
+      // margin: 15px;
+      
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+#task {
+  @extend %my-buttons;
+  bottom: 25px;
+  left: 25px;
+  padding: 10px 20px;
+  font-size: 19px;
+  border-radius: 100vw;
+  box-shadow: 0 0 7px rgba (0,0,0,.3);
+}
+
+
+//list
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 616px;
+  margin: 120px auto;
+  
+  
+  @media screen and (max-width: 493px) {
+    margin: 20px auto;
+  }
+
+  
+  
+  //item
+  &--item {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    align-items: center;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 7px 14px -2px rgba(0,0,0,.2);
+    
+    //details 
+    &-details {
+      display: flex;
+      align-items: flex-start;
+      
+      img {
+        width: 45px;
+        border-radius: 50%;
+        margin: 0 15px 0 0;
+        
+      }
+      //name 
+      &-name {
+        
+         h3 {
+      font-size: 21px;
+      
+    }
+    
+    span {
+      
+      border-radius: 4px;
+      
+      display: inline-block;
+      
+      &.blue-tag {
+        background: $blue;
+        color: #ffffff;
+        padding: 5px;
+      }
+      
+      &.green-tag {
+        background: $green;
+        color: black;
+        padding: 5px;
+      }
+    }
+        
+      }
+      
+    }
+    
+   
+    
+    &-menu {
+      width: 15px;
+      svg {
+        height: auto;
+        width: 100%;
+      
+      }
+    }
+  }
+}
